@@ -1,0 +1,108 @@
+/* [ON MOBILE DEVICES] */
+
+.navigation__container {
+    background: #000000;
+    position: sticky;
+    top: 0;
+    background: #d9cbba;
+    border-bottom: 1px solid rgba(34, 56, 178, 0.21);
+    z-index: 1;
+}
+
+.mobileiconlabel {
+    display: inline-block;
+    position: relative;
+    /* color: #ffffff; */
+    /* background: #a02620; */
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 20px 10px;
+    z-index: 2;
+}
+
+.menuitem {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+.active_menuitem {
+    background: #9b906f;
+    color: white;
+}
+
+/* Hide checkbox and menuitems until clicked */
+.menuitems__container,
+.mobileicon {
+    display: none;
+}
+
+/* Show menuitems when mobileicon-label is clicked */
+.navigation__container input:checked ~ .menuitems__container {
+    display: block;
+    background-color: #9b906f;
+}
+
+/* Add rules [ON WIDE SCREENS] */
+
+@media screen and (min-width: 850px) {
+
+
+    /* Hide Mobile icon and its label */
+    .mobileiconlabel,
+    .mobileicon {
+        display: none;
+    }
+
+    .dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: #9b906f;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Make menuitems flex horisontally (on a row) */
+    .menuitems__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+    /* rykker menupunkterne til flexend, så der er plads til logo */
+    .navigation__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 3.5rem;
+    }
+
+    .menuitem {
+        width: 130px;
+    }
+
+    .menuitem:hover {
+        background: #9b906f;
+        color: white;
+    } 
+
+    /* farveskift ved breakpoint*/
+    .menuitem {
+        color: black;
+    }
+
+    .dropdown_content a {
+        color: white;
+    }
+
+    .active_menuitem {
+        background: #9b906f;
+        color: white;
+    }
+}
