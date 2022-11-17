@@ -1,5 +1,4 @@
-/* [ON MOBILE DEVICES] */
-
+/* Mobil styling */
 .navigation__container {
     background: #000000;
     position: sticky;
@@ -12,8 +11,6 @@
 .mobileiconlabel {
     display: inline-block;
     position: relative;
-    /* color: #ffffff; */
-    /* background: #a02620; */
     font-style: normal;
     font-size: 1.2rem;
     padding: 20px 10px;
@@ -49,8 +46,6 @@
     background-color: #9b906f;
 }
 
-/* Add rules [ON WIDE SCREENS] */
-
 @media screen and (min-width: 850px) {
 
 
@@ -68,7 +63,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
     
-    /* Make menuitems flex horisontally (on a row) */
+    /* får menupunkterne til at display flex, standard row */
     .menuitems__container {
         display: flex;
         justify-content: flex-end;
